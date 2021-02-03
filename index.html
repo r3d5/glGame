@@ -102,24 +102,24 @@
 
   <script>
   var unityInstance = UnityLoader.instantiate("unityContainer", "Main/Test/build0.json", {onProgress: unityProgress});
-  function unityProgress(unityInstance, progress) {
-//     if (!unityInstance.Module) {
-//       return;
+//   function unityProgress(unityInstance, progress) {
+// //     if (!unityInstance.Module) {
+// //       return;
+// //     }
+//     const loader = document.querySelector("#loader");
+//     if (!unityInstance.progress) {
+//       const progress = document.querySelector("#loader .progress");
+//       progress.style.display = "block";
+//       gameInstance.progress = progress.querySelector(".full");
+//       loader.querySelector(".spinner").style.display = "none";
 //     }
-    const loader = document.querySelector("#loader");
-    if (!unityInstance.progress) {
-      const progress = document.querySelector("#loader .progress");
-      progress.style.display = "block";
-      gameInstance.progress = progress.querySelector(".full");
-      loader.querySelector(".spinner").style.display = "none";
-    }
-    unityInstance.progress.style.transform = `scaleX(${progress})`;
-    if (progress === 1 && !unityInstance.removeTimeout) {
-      unityInstance.removeTimeout = setTimeout(function() {
-          loader.style.display = "none";
-      }, 2000);
-    }
-  }
+//     unityInstance.progress.style.transform = `scaleX(${progress})`;
+//     if (progress === 1 && !unityInstance.removeTimeout) {
+//       unityInstance.removeTimeout = setTimeout(function() {
+//           loader.style.display = "none";
+//       }, 2000);
+//     }
+//   }
   </script>
 
 </html>
