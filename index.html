@@ -9,7 +9,11 @@
     <script src="Main/TemplateData/UnityProgress.js"></script>
     <script src="Main/Test/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Main/Test/build0.json", { Module: { 
+                onRuntimeInitialized: function() { 
+                var c = this.canvas; 
+                // do something with c 
+                }
     </script>
   </head>
   <body>
