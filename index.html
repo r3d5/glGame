@@ -103,9 +103,9 @@
   <script>
   var unityInstance = UnityLoader.instantiate("unityContainer", "Main/Test/build0.json", {onProgress: unityProgress});
   function unityProgress(unityInstance, progress) {
-    if (!unityInstance.Module) {
-      return;
-    }
+//     if (!unityInstance.Module) {
+//       return;
+//     }
     const loader = document.querySelector("#loader");
     if (!unityInstance.progress) {
       const progress = document.querySelector("#loader .progress");
