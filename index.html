@@ -9,7 +9,7 @@
     <script src="Main/TemplateData/UnityProgress.js"></script>
     <script src="Main/Test/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Main/Test/test.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
