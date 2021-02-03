@@ -102,20 +102,20 @@
   <script src="Build/UnityLoader.js"></script>
   <script>
   var unityInstance = UnityLoader.instantiate("unityContainer", "Main/Test/build0.json", {onProgress: UnityProgress});
-  function UnityProgress(gameInstance, progress) {
-    if (!gameInstance.Module) {
+  function UnityProgress(unityInstance, progress) {
+    if (!unityInstance.Module) {
       return;
     }
     const loader = document.querySelector("#loader");
-    if (!gameInstance.progress) {
+    if (!unityInstance.progress) {
       const progress = document.querySelector("#loader .progress");
       progress.style.display = "block";
       gameInstance.progress = progress.querySelector(".full");
       loader.querySelector(".spinner").style.display = "none";
     }
-    gameInstance.progress.style.transform = `scaleX(${progress})`;
-    if (progress === 1 && !gameInstance.removeTimeout) {
-      gameInstance.removeTimeout = setTimeout(function() {
+    unityInstance.progress.style.transform = `scaleX(${progress})`;
+    if (progress === 1 && !unityInstance.removeTimeout) {
+      unityInstance.removeTimeout = setTimeout(function() {
           loader.style.display = "none";
       }, 2000);
     }
