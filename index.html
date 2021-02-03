@@ -101,8 +101,8 @@
    <script src="Main/Test/UnityLoader.js"></script>
 
   <script>
-  var unityInstance = UnityLoader.instantiate("unityContainer", "Main/Test/build0.json", {onProgress: UnityProgress});
-  function UnityProgress(unityInstance, progress) {
+  var unityInstance = UnityLoader.instantiate("unityContainer", "Main/Test/build0.json", {onProgress: unityProgress});
+  function unityProgress(unityInstance, progress) {
     if (!unityInstance.Module) {
       return;
     }
